@@ -1,0 +1,72 @@
+/*
+    USE CLASS DEFAULT TO MAKE BUTTON 
+    YOU CAN CHANGE YOUR BUTTON SIZE WITH (LARGE_SIZE, MEDIUM_SIZE AND SMALL SIZE)
+    IF YOU WANT THE BUTTON DISABLE JUST ADD CLASS "DISABLED"
+*/
+
+
+button {
+    font-size: 14px;
+}
+.disabled {
+    color: #F0F0F0;
+    opacity: 0.5;
+    pointer-events: none;
+    background: #F0F0F0;
+}
+
+.default {
+    background-color: #ffffff;
+    border: 2px solid #EB5E2A;
+    color: #EB5E2A;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    line-height: 14px;
+    &:hover {
+        background-color: #BE4C20;
+        color: #ffffff;
+        border-color:#BE4C20;
+    }
+    &:focus {
+        background-color: #EB5E2A;
+        color: #ffffff;
+    }
+    
+    &:active {
+        &:hover {
+        background-color: #BE4C20;
+        border-color: #BE4C20;
+        color: #ffffff;
+        }
+    }
+
+    &.large_size {
+        @extend .default;
+        width: 104px;
+        height: 40px;
+    }
+
+    &.medium_size {
+        @extend .default;
+        width: 104px;
+        height: 32px;
+    }
+
+    &.small_size {
+        @extend .default;
+        width: 104px;
+        height: 24px;
+    }
+
+}
+
+    /*&.small_size_b{
+        @extend .default;
+        width: 130px;
+        background: url('../images/non-active');
+        background-repeat: no-repeat;
+        background-position: left center;
+    }*/
+
+
